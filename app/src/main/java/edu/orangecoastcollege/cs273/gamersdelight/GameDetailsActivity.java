@@ -23,7 +23,7 @@ public class GameDetailsActivity extends AppCompatActivity {
 
         Intent detailsIntent = getIntent();
 
-        Game game = (Game) detailsIntent.getParcelableExtra("SelectedGame");
+        Game selectedGame = (Game) detailsIntent.getParcelableExtra("SelectedGame");
 
         /*
         String name = detailsIntent.getStringExtra("Name");
@@ -44,9 +44,9 @@ public class GameDetailsActivity extends AppCompatActivity {
         }
         */
 
-        gameDetailsNameTextView.setText(game.getName());
-        gameDetailsDescriptionTextView.setText(game.getDescription());
-        gameDetailsRatingBar.setRating(game.getRating());
-        //gameDetailsImageView.setImageDrawable(game.getImageName());
+        gameDetailsNameTextView.setText(selectedGame.getName());
+        gameDetailsDescriptionTextView.setText(selectedGame.getDescription());
+        gameDetailsRatingBar.setRating(selectedGame.getRating());
+        //gameDetailsImageView.setImageDrawable(selectedGame.getImageName());
     }
 }
