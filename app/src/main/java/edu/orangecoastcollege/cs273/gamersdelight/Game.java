@@ -159,7 +159,11 @@ public class Game implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
+        parcel.writeInt(mId);
+        parcel.writeString(mName);
+        parcel.writeString(mDescription);
+        parcel.writeFloat(mRating);
+        parcel.writeString(mImageName);
     }
 
     public static final Parcelable.Creator<Game> CREATOR =
